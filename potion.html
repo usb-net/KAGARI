@@ -379,7 +379,7 @@ input[type=text]:focus { outline: none; border-color: var(--gold); box-shadow: 0
   <section class="notice" aria-label="使いかた">
     <svg class="orn top" viewBox="0 0 120 12" aria-hidden="true"><path d="M0 6h50M70 6h50" stroke="currentColor" stroke-width=".8"/><path d="M60 1l5 5-5 5-5-5z" fill="currentColor"/></svg>
     <ul>
-      <li>31日に、みんなで飲む元気ポーションを作りマス！材料ボシュウ中。みんなが思う「元気が出る食材」書いて、この鍋に入れてネ！何個でもOK！下ネタはBANです！lol</li>
+      <li>31日に、みんなで飲む元気ポーションを作りマス！材料ボシュウ中。みんなが思う「元気が出る材料」書いて、この鍋に入れてネ！ポーションだから飲み物オススメ。固形物はミキサーにかけマス！何個でもOK！下ネタはBANです！lol</li>
       <li>実物でもメモでもOK。国内で手に入る、予算5万円くらいまで推奨</li>
       <li>誰が入れたかはナイショ。31日になったら自分で言ってもOK</li>
       <li>ポーションは31日中庭に設置してある認識でドゾ。自由に飲んで。31日だけ「ひと口飲む」が使えマス。</li>
@@ -526,12 +526,12 @@ input[type=text]:focus { outline: none; border-color: var(--gold); box-shadow: 0
     </div>
     <div class="row">
       <div class="field">
-        <label for="in-name">元気が出る食材</label>
-        <input type="text" id="in-name" placeholder="例：焼き芋" maxlength="40">
+        <label for="in-name">元気が出る飲み物（材料）</label>
+        <input type="text" id="in-name" placeholder="例：レッドブル" maxlength="40">
       </div>
       <div class="field">
         <label for="in-desc">ひとこと（任意・カッコ内に表示）</label>
-        <input type="text" id="in-desc" placeholder="例：裏庭で掘ったやつ" maxlength="60">
+        <input type="text" id="in-desc" placeholder="例：キンキンに冷えたやつ" maxlength="60">
       </div>
     </div>
     <div class="row">
@@ -718,7 +718,7 @@ input[type=text]:focus { outline: none; border-color: var(--gold); box-shadow: 0
 
   function addNow() {
     var name = $("#in-name").value.trim();
-    if (!name) { toast("食材の名前を入れてください"); $("#in-name").focus(); return; }
+    if (!name) { toast("材料の名前を入れてください"); $("#in-name").focus(); return; }
     var desc = $("#in-desc").value.trim();
     run(function () {
       return call("addItem", name, desc).then(function (r) {
