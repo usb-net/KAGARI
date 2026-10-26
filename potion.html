@@ -690,12 +690,7 @@ input[type=text]:focus { outline: none; border-color: var(--gold); box-shadow: 0
       meta.className = "meta";
       meta.textContent = fmtTime(l.at);
       tx.appendChild(meta);
-      var cp = document.createElement("button");
-      cp.className = "btn small";
-      cp.textContent = "コピー";
-      cp.addEventListener("click", function () { copyText(l.text, tx); });
       li.appendChild(tx);
-      li.appendChild(cp);
       ul.appendChild(li);
     });
     $("#log-empty").hidden = list.length > 0;
